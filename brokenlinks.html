@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Testing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .link-section {
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid #007bff;
+            background-color: #f8f9fa;
+        }
+        
+        .working-links {
+            border-left-color: #28a745;
+        }
+        
+        .broken-links {
+            border-left-color: #dc3545;
+        }
+        
+        h2 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .link-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .link-list a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .link-list a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        
+        .broken-links a {
+            color: #dc3545;
+        }
+        
+        .broken-links a:hover {
+            color: #a71e2a;
+        }
+        
+        .description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Link Testing Page</h1>
+        
+        <div class="note">
+            <strong>Purpose:</strong> This page contains a mix of working and broken links for testing purposes. 
+            Working links should open successfully, while broken links will result in errors.
+        </div>
+        
+        <div class="link-section working-links">
+            <h2>✅ Working Links</h2>
+            <ul class="link-list">
+                <li>
+                    <a href="https://www.google.co.in" target="_blank">Google India</a>
+                    <div class="description">Search engine - should work perfectly</div>
+                </li>
+                <li>
+                    <a href="https://www.flipkart.com" target="_blank">Flipkart</a>
+                    <div class="description">E-commerce website - should load without issues</div>
+                </li>
+                <li>
+                    <a href="https://www.github.com" target="_blank">GitHub</a>
+                    <div class="description">Code repository platform - working link</div>
+                </li>
+                <li>
+                    <a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a>
+                    <div class="description">Developer Q&A platform - should work fine</div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="link-section broken-links">
+            <h2>❌ Broken Links</h2>
+            <ul class="link-list">
+                <li>
+                    <a href="https://www.nonexistentwebsite12345.com" target="_blank">Non-existent Website</a>
+                    <div class="description">This domain doesn't exist - will show DNS error</div>
+                </li>
+                <li>
+                    <a href="https://www.google.com/broken-page-404" target="_blank">Google 404 Page</a>
+                    <div class="description">Valid domain but non-existent page - will show 404 error</div>
+                </li>
+                <li>
+                    <a href="http://broken-protocol-site.xyz" target="_blank">Broken Protocol Site</a>
+                    <div class="description">Invalid domain with HTTP - connection will fail</div>
+                </li>
+                <li>
+                    <a href="https://www.flipkart.com/invalid-product-page-xyz123" target="_blank">Flipkart Invalid Page</a>
+                    <div class="description">Valid Flipkart domain but non-existent product page</div>
+                </li>
+                <li>
+                    <a href="ftp://invalidftpserver.com" target="_blank">Invalid FTP Link</a>
+                    <div class="description">FTP protocol link that will not work in browser</div>
+                </li>
+                <li>
+                    <a href="mailto:invalid@nonexistentdomain999.com">Broken Email Link</a>
+                    <div class="description">Email link to non-existent domain</div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="link-section">
+            <h2>📝 Testing Instructions</h2>
+            <ul style="color: #555; line-height: 1.6;">
+                <li>Click on the <strong>working links</strong> to verify they open successfully</li>
+                <li>Click on the <strong>broken links</strong> to observe different types of errors:
+                    <ul style="margin-top: 10px;">
+                        <li>DNS resolution failures</li>
+                        <li>404 Page Not Found errors</li>
+                        <li>Connection timeouts</li>
+                        <li>Protocol errors</li>
+                    </ul>
+                </li>
+                <li>Use browser developer tools (F12) to inspect network errors</li>
+                <li>Document the different error types for testing purposes</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
